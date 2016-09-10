@@ -209,7 +209,7 @@ void process_zone_eff(std::string sound_file)
 		std::cout << std::setw(pad) << "FadeOutMS " << sound_entry.FadeOutMS << std::endl;
 		std::cout << std::setw(pad) << "UnkRange72 " << sound_entry.UnkRange72 << std::endl;
 		std::cout << std::setw(pad) << "FullVolRange " << sound_entry.FullVolRange << std::endl;
-		std::cout << std::setw(pad) << "UnkRange80 " << sound_entry.UnkRange80 << std::endl;
+		std::cout << std::setw(pad) << "UnkRange80 " << sound_entry.UnkRange80 << std::endl << std::endl;
 
 		if (sound_entry.SoundType == 1 && sound_entry.SoundID1 == sound_entry.SoundID2 && sound_entry.SoundID1 >= 0)
 		{
