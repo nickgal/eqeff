@@ -9,9 +9,6 @@ The mp3 files need to be named `<zone>.xmi(<subsong #).mp3` (`qeytoqrg.xmi(1).mp
 To patch a single file:
 `./eqeff /Applications/EverQuest.app/Contents/Resources/qeytoqrg_sounds.eff`
 
-YOLO patch command:
-`find /Applications/EverQuest.app/Contents/Resources -type f -iname "*_sounds.eff" -exec ./eqeff {} \;`
-
 ## Issues
 
 Some zones like sro and permafrost have `_sounds.eff` files but don't have a corresponding `xmi` file.
