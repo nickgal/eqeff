@@ -78,6 +78,13 @@ std::string get_filename(std::string filename)
 	return filename;
 }
 
+bool xmi_for_zone(std::string directory, std::string zone)
+{
+	std::string path = build_path(directory, zone + ".xmi");
+	std::ifstream xmi_file(path);
+	return xmi_file.good();
+}
+
 std::string zone_from_sounds_eff(std::string sound_file)
 {
 	std::string zone;
@@ -159,6 +166,12 @@ void process_zone_eff(std::string sound_file)
 	if (!zone.size())
 	{
 		std::cout << "Unable to parse zone from " << sound_file << std::endl;
+		return;
+	}
+
+	if (!xmi_for_zone(directory, zone))
+	{
+		std::cout << "No xmi found for " << zone << std::endl;
 		return;
 	}
 
