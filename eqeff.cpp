@@ -156,6 +156,12 @@ void process_zone_eff(std::string sound_file)
 	std::string directory = get_directory(sound_file);
 	std::string zone = zone_from_sounds_eff(sound_file);
 
+	if (!zone.size())
+	{
+		std::cout << "Unable to parse zone from " << sound_file << std::endl;
+		return;
+	}
+
 	std::string src_filename = get_filename(sound_file);
 	std::string dest_filename = src_filename;
 	// std::string dest_filename = src_filename + "-patched";
